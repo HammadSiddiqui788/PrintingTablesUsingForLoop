@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeric Table Multiplier</title>
+</head>
+<body>
+    <div id="container" style="text-align: center;">
+        <h1>Table Printer</h1>
+        <h2> Enter your desired number</h2>
+        <input type="number" name="" id="num">
+        <button onclick="table()">Print Table</button>
+        <h3 id="result" style="padding: 30px; background-color: rgb(206, 206, 206); line-height: 20px;"></h3>
+    </div>
+</body>
+
+<script>
+function table() {
+    var num = document.getElementById("num").value;
+    var result;
+    for (var i=0; i<11; i++) {
+        result = num*i;
+        console.log(result);
+        document.getElementById("result").innerText += `${num}x${i}=${result}\n`;
+    }
+}
+</script>
+</html>
